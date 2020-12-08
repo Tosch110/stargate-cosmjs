@@ -1,0 +1,25 @@
+diff: true
+extension:
+  - js
+package: ./package.json
+reporter: spec
+slow: 75
+timeout: 2000
+ui: bdd
+require: 'babel-register'
+file:
+  - './test/commands.js'
+  - './test/util.js'
+  - './test/events.js'
+  - './test/handler.js'
+  - './test/database.js'
+  - './test/iris.js'
+recursive: false
+color: true
+
+watch: false
+watch-files:
+  - 'src/**/*.js'
+  - 'test/**/*.js'
+watch-ignore:
+  - 'lib/vendor'

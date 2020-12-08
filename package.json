@@ -1,0 +1,42 @@
+{
+  "name": "custommessage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./dist,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "test": "mocha --require babel-core/register --require babel-polyfill test.js",
+    "start": "npm run build && node dist/index.js",
+    "send": "npm run build && node dist/send.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cosmjs/crypto": "^0.23.1",
+    "@cosmjs/encoding": "^0.23.1",
+    "@cosmjs/proto-signing": "^0.24.0-alpha.10",
+    "@cosmjs/stargate": "^0.24.0-alpha.10",
+    "google-protobuf": "^3.14.0",
+    "long": "^4.0.0",
+    "pbjs": "0.0.14",
+    "protobufjs": "^6.10.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "rimraf": "^3.0.2",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "co-mocha": "^1.2.2",
+    "moxios": "^0.4.0",
+    "sinon": "^9.2.0",
+    "sinon-chai": "^3.5.0",
+    "mocha": "^8.2.0"
+  }
+}
